@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "551708197069",
+    "project_id": "scheduler-pranav-project1",
+    "storage_bucket": "scheduler-pranav-project1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:551708197069:android:f25ea8ff54aace59da2984",
+        "android_client_info": {
+          "package_name": "com.Pranav.scheduler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "551708197069-f03rievdqm41eoqc4vllgr6f92cqum8o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsuxz86Vo3leO73D1M4CCCQfPUAccMOgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "551708197069-f03rievdqm41eoqc4vllgr6f92cqum8o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "551708197069-hp186r077hh04kblc5qkolveu9tva6u7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Pranav.scheduler"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
