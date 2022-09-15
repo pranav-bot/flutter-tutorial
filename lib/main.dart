@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:scheduler/Views/login_view.dart';
 import 'package:scheduler/Views/register_view.dart';
 import 'package:scheduler/Views/verify_email_view.dart';
+import 'package:scheduler/constants/routes.dart';
 import 'package:scheduler/firebase_options.dart';
 import 'dart:developer' as devtools show log;
 
@@ -16,8 +17,9 @@ void main() {
     ),
     home: const HomePage(),
     routes: {
-      '/login/': (context) => const LoginView(),
-      '/register/': (context) => const RegisterView()
+      loginRoute: (context) => const LoginView(),
+      registerRoute: (context) => const RegisterView(),
+      notesRoute: (context) => const NotesView()
     },
   ));
 }
@@ -74,7 +76,12 @@ class _NotesViewState extends State<NotesView> {
                 switch (value) {
                   case MenuAction.logout:
                     final shouldLogout = await showLogOutDialog(context);
-                    devtools.log(shouldLogout.toString());
+                    if (shouldLogout) {
+                      await FirebaseAuth.instance.signOut();
+                      Navigator.of(context)
+                          .pushNamedAndRemoveUntil(loginRoute, (_) => false);
+                    }
+
                     break;
                 }
               },
